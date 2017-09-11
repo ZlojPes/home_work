@@ -18,6 +18,8 @@ public class Garland {
     }
 
     static void moveLeft(int numberOfMoves) {
-        garland <<= numberOfMoves;
+        for (int i = 0; i < numberOfMoves; i++) {
+            garland <<= 1;
+        }
     }
 }
