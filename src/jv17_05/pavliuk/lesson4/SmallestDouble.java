@@ -4,11 +4,10 @@ import java.util.Scanner;
 
 public class SmallestDouble {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         double[] ar = new double[3];
         for (int i = 0; i < 3; i++) {
             System.out.println("Введите " + (i + 1) + "-е вещественное число:");
-            ar[i] = getUserInputPositive(sc);
+            ar[i] = getUserInputPositive();
         }
         double result;
         if (ar[0] < ar[1] && ar[0] < ar[2]) {
@@ -19,8 +18,9 @@ public class SmallestDouble {
         System.out.println("Наименьшим числом по модулю является " + result);
     }
 
-    private static double getUserInputPositive(Scanner sc) {
+    private static double getUserInputPositive() {
         while (true) {
+            Scanner sc = new Scanner(System.in);
             if (sc.hasNextDouble()) {
                 double out = sc.nextDouble();
                 return out > 0 ? out : -out;
