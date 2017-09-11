@@ -26,6 +26,6 @@ public class Garland {
     }
 
     static void checkFirstLamp() {
-        System.out.println((garland & 1)==1);
+        System.out.println((garland & 1)==1);  // Проверяет, включена ли самая правая лампа.
     }
 }
