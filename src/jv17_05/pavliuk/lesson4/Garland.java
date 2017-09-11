@@ -7,8 +7,10 @@ public class Garland {
         System.out.println(Integer.toBinaryString(garland));
         blink(9);
         System.out.println(Integer.toBinaryString(garland));
+        checkFirstLamp();
         moveLeft(11);
         System.out.println(Integer.toBinaryString(garland));
+        checkFirstLamp();
     }
 
     static void blink(int count) {
@@ -21,5 +23,9 @@ public class Garland {
         for (int i = 0; i < numberOfMoves; i++) {
             garland <<= 1;
         }
+    }
+
+    static void checkFirstLamp() {
+        System.out.println((garland & 1)==1);
     }
 }
