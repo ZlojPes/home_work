@@ -6,8 +6,7 @@ public class DoubleAverage {
         for (String c : args) {
             sum += Double.parseDouble(c);
         }
-        double result = 0;
-        result = args.length != 0 ? sum / args.length : 0;
+        double result = args.length != 0 ? sum / args.length : 0;
         System.out.println("Среднее арифметическое значение от переданных аргументов = " + result);
     }
 }
