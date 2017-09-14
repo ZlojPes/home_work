@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class coolGarland {
     private static int garland;
 
-    static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
@@ -18,7 +18,7 @@ public class coolGarland {
             System.out.println("4. Проверить, включена ли нужная лампа (введите 4,n где n - номер проверяемой лампы, нумерация справа налево)");
 
             String[] input = scanner.nextLine().split(",");
-            int param = 0;
+            int param;
             if (input.length >= 2) {
                 try {
                     param = Integer.parseInt(input[1]);
@@ -67,11 +67,11 @@ public class coolGarland {
     private static void checkLamp(int num) {
         int mask = (int) Math.pow(2, num - 1);
         System.out.println(getNormalizedGarland());
-        String cursor = "^";
-        while (cursor.length() != 33 - num) {
-            cursor = " " + cursor;
+        String pointer = "^";
+        while (pointer.length() != 33 - num) {
+            pointer = " " + pointer;
         }
-        System.out.println(cursor);
+        System.out.println(pointer);
         if ((mask & garland) == mask) {
             System.out.println("Лампа №" + num + " светится");
         } else {
