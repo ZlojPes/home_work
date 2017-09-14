@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class coolGarland {
     private static int garland;
+    Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
@@ -15,7 +16,6 @@ public class coolGarland {
             System.out.println("3. Запустить бегущие огни вправо (введите 3,n где n - количество смещений вправо)");
             System.out.println("4. Проверить, включена ли нужная лампа (введите 4,n где n - номер проверяемой лампы, нумерация справа налево)");
 
-            Scanner scanner = new Scanner(System.in);
             String[] input = scanner.nextLine().split(",");
             int param = 0;
             if (input.length >= 2) {
