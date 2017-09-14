@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class coolGarland {
     private static int garland;
-    static Scanner scanner = new Scanner(System.in);
 
     static Scanner scanner = new Scanner(System.in);
 
