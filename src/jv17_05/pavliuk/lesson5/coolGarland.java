@@ -42,7 +42,7 @@ public class coolGarland {
                         if (param < 33) {
                             checkLamp(param);
                         } else {
-                            System.out.println("Ошибочный ввод, попробуйте снова.\n\n");
+                            System.out.println("Ламп всего 32, попробуйте снова.\n\n");
                             continue;
                         }
                         break;
