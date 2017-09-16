@@ -40,7 +40,7 @@ public class CoolGarland {
                         runLights(false, param);
                         break;
                     case "4":
-                        if (param < 33) {
+                        if (param <= 32 && param>=1) {
                             checkLamp(param);
                         } else {
                             System.out.println("Ламп всего 32, попробуйте снова.\n\n");
