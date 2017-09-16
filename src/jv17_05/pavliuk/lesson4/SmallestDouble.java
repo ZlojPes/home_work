@@ -7,7 +7,7 @@ public class SmallestDouble {
         Scanner sc = new Scanner(System.in);
         double[] ar = new double[3];
         for (int i = 0; i < 3; i++) {
-            ar[i] = getUserInputPositive(sc, i+1);
+            ar[i] = getUserInputPositive(sc, i + 1);
         }
         double result;
         if (ar[0] < ar[1] && ar[0] < ar[2]) {
@@ -20,7 +20,7 @@ public class SmallestDouble {
         System.out.println("Наименьшим числом по модулю является " + result);
     }
 
-    private static double getUserInputPositive(Scanner sc,int counter) {
+    private static double getUserInputPositive(Scanner sc, int counter) {
         while (true) {
             System.out.println("Введите " + counter + "-е вещественное число:");
             if (sc.hasNextDouble()) {

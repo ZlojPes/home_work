@@ -26,6 +26,6 @@ public class Garland {
     }
 
     static void isFirstLampLighting() {
-        System.out.println((garland & 1)==1);
+        System.out.println((garland & 1) == 1);
     }
 }
