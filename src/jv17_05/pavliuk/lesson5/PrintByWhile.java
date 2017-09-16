@@ -1,6 +1,6 @@
 package jv17_05.pavliuk.lesson5;
 
-public class printByWhile {
+public class PrintByWhile {
     public static void main(String[] args) {
         int counter = 0;
         while (counter < 10)

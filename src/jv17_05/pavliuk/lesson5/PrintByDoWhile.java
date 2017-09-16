@@ -1,6 +1,6 @@
 package jv17_05.pavliuk.lesson5;
 
-public class printByDoWhile {
+public class PrintByDoWhile {
     public static void main(String[] args) {
         int counter = 0;
         do {

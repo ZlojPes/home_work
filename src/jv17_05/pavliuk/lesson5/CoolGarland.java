@@ -2,7 +2,7 @@ package jv17_05.pavliuk.lesson5;
 
 import java.util.Scanner;
 
-public class coolGarland {
+public class CoolGarland {
     private static int garland;
 
     private static Scanner scanner = new Scanner(System.in);

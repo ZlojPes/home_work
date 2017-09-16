@@ -1,6 +1,6 @@
 package jv17_05.pavliuk.lesson5;
 
-public class factorialCounter {
+public class FactorialCounter {
     public static void main(String[] args) {
         int random = (int) (Math.random() * 20);
         long factorial = 1;
