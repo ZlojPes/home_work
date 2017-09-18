@@ -1,8 +1,5 @@
 package jv17_05.pavliuk.lesson6;
 
-/**
- * Created by student on 17-Sep-17.
- */
 public class WeekArray {
     public static void main(String[] args) {
         String[] week = new String[7];
