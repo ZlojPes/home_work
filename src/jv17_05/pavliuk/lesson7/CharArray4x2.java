@@ -1,4 +1,4 @@
-package jv17_05.pavliuk.lesson6;
+package jv17_05.pavliuk.lesson7;
 
 import java.util.Arrays;
 
