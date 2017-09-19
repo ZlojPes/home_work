@@ -12,11 +12,11 @@ public class PrintSum {
 
     private static int getUserInput(Scanner scanner) {
         while (true) {
-            System.out.print("Введите слагаемое (целое число)");
+            System.out.println("Введите слагаемое (целое число)");
             if (scanner.hasNextInt()) {
                 return scanner.nextInt();
             } else {
-                System.out.print("Вы ввели не целое число!");
+                System.out.println("Вы ввели не целое число!");
                 scanner.nextLine();
             }
         }
