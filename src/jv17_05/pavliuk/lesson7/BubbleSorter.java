@@ -10,7 +10,7 @@ public class BubbleSorter {
         System.out.println("Отсортированный массив:" + Arrays.toString(array));
     }
 
-    private static void sort(int[] array) {
+    static void sort(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             boolean hasChanges = false;
             for (int j = 0; j < i; j++) {
