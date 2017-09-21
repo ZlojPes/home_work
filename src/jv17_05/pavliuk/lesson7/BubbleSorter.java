@@ -1,6 +1,6 @@
 package jv17_05.pavliuk.lesson7;
 
-        import java.util.Arrays;
+import java.util.Arrays;
 
 public class BubbleSorter {
     public static void main(String[] args) {

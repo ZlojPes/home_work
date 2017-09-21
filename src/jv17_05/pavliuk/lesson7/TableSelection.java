@@ -2,7 +2,7 @@ package jv17_05.pavliuk.lesson7;
 
 import java.util.Arrays;
 
-public class Table {
+public class TableSelection {
     public static void main(String[] args) {
         int[] array = {6, 9, 2, 7, 0};
         System.out.println("Оригинальный массив:" + Arrays.toString(array));
@@ -17,15 +17,20 @@ public class Table {
 
     public static void sort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            for (int j = array.length - 1; j > i; j--) {
+            int k = i;
+            int x = array[i];
+            for (int j = i + 1; j < array.length; j++) {
                 boolean isChanged = false;
-                if (array[j - 1] > array[j]) {
-                    int tmp = array[j - 1];
-                    array[j - 1] = array[j];
-                    array[j] = tmp;
+                if (array[j] < x) {
+                    k = j;
+                    x = array[j];
                     isChanged = true;
                 }
                 print(i, j, array, isChanged);
+            }
+            if (k != i) {
+                array[k] = array[i];
+                array[i] = x;
             }
         }
     }

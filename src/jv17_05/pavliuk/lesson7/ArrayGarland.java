@@ -1,17 +1,18 @@
-package jv17_05.pavliuk.lesson5;
+package jv17_05.pavliuk.lesson7;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class CoolGarland {
-    private static int garland;
+public class ArrayGarland {
+    private static int[] garland;
 
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
-            garland = (int) (Math.random() * Integer.MAX_VALUE);
+            garland = getRandomGarland();
             System.out.println("Имеется гирлянда с 32 лампами, вот она:");
-            System.out.println(getNormalizedGarland());
+            System.out.println(Arrays.toString(garland));
             System.out.println("Выберите действие:\n1. Сменить (инвертировать) состояние лампочек (введите 1,n где n - количество инверсий)");
             System.out.println("2. Запустить бегущие огни влево (введите 2,n где n - количество смещений влево)");
             System.out.println("3. Запустить бегущие огни вправо (введите 3,n где n - количество смещений вправо)");
@@ -65,14 +66,13 @@ public class CoolGarland {
     }
 
     private static void checkLamp(int num) {
-        int mask = (int) Math.pow(2, num - 1);
-        System.out.println(getNormalizedGarland());
+        System.out.println(Arrays.toString(garland));
         String pointer = "^";
-        while (pointer.length() != 33 - num) {
+        while (pointer.length() != 98 - num * 3) {
             pointer = " " + pointer;
         }
         System.out.println(pointer);
-        if ((mask & garland) == mask) {
+        if (garland[32 - num] == 1) {
             System.out.println("Лампа №" + num + " светится");
         } else {
             System.out.println("Лампа №" + num + " не светится");
@@ -80,14 +80,16 @@ public class CoolGarland {
     }
 
     private static void runLights(boolean toLeft, int num) {
-        System.out.println(getNormalizedGarland());
+        System.out.println(Arrays.toString(garland));
         for (int i = 0; i < num; i++) {
             if (toLeft) {
-                garland <<= 1;
+                System.arraycopy(garland, 1, garland, 0, 31);
+                garland[31] = 0;
             } else {
-                garland >>= 1;
+                System.arraycopy(garland, 0, garland, 1, 31);
+                garland[0] = 0;
             }
-            System.out.println(getNormalizedGarland());
+            System.out.println(Arrays.toString(garland));
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
@@ -98,8 +100,10 @@ public class CoolGarland {
 
     private static void blink(int num) {
         for (int i = 0; i < num; i++) {
-            garland = ~garland;
-            System.out.println(getNormalizedGarland());
+            for (int j = 0; j < garland.length; j++) {
+                garland[j] = Math.abs(garland[j] - 1);
+            }
+            System.out.println(Arrays.toString(garland));
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
@@ -108,11 +112,14 @@ public class CoolGarland {
         }
     }
 
-    private static String getNormalizedGarland() {
-        String output = Integer.toBinaryString(garland);
-        while (output.length() != 32) {
-            output = "0" + output;
+
+    private static int[] getRandomGarland() {
+        int[] garland = new int[32];
+        for (int i = 0; i < garland.length; i++) {
+            if (Math.random() > .5) {
+                garland[i] = 1;
+            }
         }
-        return output;
+        return garland;
     }
 }
