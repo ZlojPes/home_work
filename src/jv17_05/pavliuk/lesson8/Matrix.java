@@ -29,6 +29,20 @@ public class Matrix {
         return resultArray;
     }
 
+    public void multiply(int multiplier) {
+        print(array);
+        System.out.println("*\n" + multiplier);
+        System.out.print("__________________________________\n[");
+        for (double[] i : array) {
+            System.out.print("[");
+            for (double j : i) {
+                System.out.print(j * multiplier + ", ");
+            }
+            System.out.print("],");
+        }
+        System.out.println("], ");
+    }
+
     public double[][] getMatrixArray() {
         return array;
     }
@@ -58,5 +72,7 @@ public class Matrix {
         anotherMatrix.print();
         System.out.println("__________________________________");
         matrix.print(resultArray);
+        System.out.println("\n");
+        matrix.multiply(10);
     }
 }
