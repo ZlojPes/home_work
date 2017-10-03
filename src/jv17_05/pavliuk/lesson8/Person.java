@@ -15,16 +15,16 @@ public class Person {
     }
 
     public void move() {
-        System.out.println(fullName + " движется к своей цели");
+        System.out.println(fullName + " is moving towards his goal");
     }
 
     public void talk() {
-        System.out.println(fullName + " говорит о Java");
+        System.out.println(fullName + " talks about Java");
     }
 
     public static void main(String[] args) {
         Person first = new Person();
-        Person second = new Person("Александр Павлюк", 35);
+        Person second = new Person("Alexander Pavliuk", 35);
         first.talk();
         second.move();
         second.talk();
