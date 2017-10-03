@@ -6,6 +6,9 @@ public class Phone {
     private String model;
 
     public Phone() {
+        number=0;
+        weight=100;
+        model="Default model";
     }
 
     public Phone(long number, int weight, String model) {
