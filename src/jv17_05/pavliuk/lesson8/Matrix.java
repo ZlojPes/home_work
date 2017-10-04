@@ -12,12 +12,12 @@ public class Matrix {
         columns = array[0].length;
     }
 
-    public double[][] sum(Matrix anotherMatrix) {
+    public Matrix sum(Matrix anotherMatrix) {
         double array[][] = anotherMatrix.getMatrixArray();
         if (array.length != this.array.length) {
             throw new UnsupportedOperationException("Складываемые матрицы должны быть равны!");
         }
-        double[][] resultArray = new double[array.length][array[0].length];
+        double[][] resultArray = new double[rows][columns];
         for (int i = 0; i < array.length; i++) {
             if (array[i].length != this.array[i].length) {
                 throw new UnsupportedOperationException("Складываемые матрицы должны быть равны!");
@@ -26,7 +26,7 @@ public class Matrix {
                 resultArray[i][j] = array[i][j] + this.array[i][j];
             }
         }
-        return resultArray;
+        return new Matrix(resultArray);
     }
 
     public void multiply(int multiplier) {
@@ -66,12 +66,12 @@ public class Matrix {
     public static void main(String[] args) {
         Matrix matrix = new Matrix(new double[][]{{1.5, 2.5, 3.5}, {2.5, 3.5, 4.5}});
         Matrix anotherMatrix = new Matrix(new double[][]{{2.5, 3.5, 4.5}, {3.5, 4.5, 5.5}});
-        double[][] resultArray = matrix.sum(anotherMatrix);
+        Matrix resultMatrix = matrix.sum(anotherMatrix);
         matrix.print();
         System.out.println("+");
         anotherMatrix.print();
         System.out.println("__________________________________");
-        matrix.print(resultArray);
+        resultMatrix.print();
         System.out.println("\n");
         matrix.multiply(10);
     }
