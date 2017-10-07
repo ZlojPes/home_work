@@ -5,7 +5,7 @@ public class Person {
     int age;
 
     public Person() {
-        fullName = "Not specified";
+        fullName = "NoName";
         age = 0;
     }
 
@@ -14,8 +14,19 @@ public class Person {
         this.age = age;
     }
 
+    public void move() {
+        System.out.println(fullName + " is moving towards his goal");
+    }
+
+    public void talk() {
+        System.out.println(fullName + " talks about Java");
+    }
+
     public static void main(String[] args) {
         Person first = new Person();
-        Person second = new Person("Александр Павлюк", 35);
+        Person second = new Person("Alexander Pavliuk", 35);
+        first.talk();
+        second.move();
+        second.talk();
     }
 }
