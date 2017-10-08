@@ -26,6 +26,14 @@ public class Phone {
         System.out.println("Звонит " + callerName + " {" + number + "}");
     }
 
+    public void sendMessage(long ... nums){
+        for(long num:nums){
+            System.out.println("Передача сообщения на номер "+num);
+        }
+    }
+
+
+
     public long getNumber() {
         return number;
     }
@@ -55,6 +63,7 @@ public class Phone {
         System.out.println(phone1.getNumber());
         System.out.println(phone2.getNumber());
         System.out.println(phone3.getNumber());
+        phone1.sendMessage(380991234567L, 380579876543L, 380664321765L);
     }
 
     @Override
