@@ -26,6 +26,6 @@ public class Book implements Composite {
 
     @Override
     public String toString() {
-        return "Book #" + inventoryNumber + " " + name;
+        return "Книга #" + inventoryNumber + " " + name;
     }
 }

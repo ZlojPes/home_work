@@ -34,8 +34,6 @@ public class LibraryTest {
         libList.add(library);
 
         new LibraryTest().print(libList);
-
-
     }
 
     public void print(List<Composite> list) {
@@ -44,7 +42,7 @@ public class LibraryTest {
                 System.out.println(element);
                 print(element.getChild());
             }
-            System.out.println("=======================================");
+            System.out.println();
         }
     }
 }

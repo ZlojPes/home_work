@@ -18,7 +18,6 @@ public class Library implements Composite {
         readers.add(reader);
     }
 
-
     @Override
     public List<Composite> getChild() {
         return readers;
