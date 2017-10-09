@@ -1,10 +1,31 @@
 package jv17_05.pavliuk.lesson10.library;
 
-public class Library {
-    public static void main(String[] args) {
-        Library library = new Library();
-        Book book1= new Book("\"Thinking in Java\", Bruce Eckel");
-        Book book2= new Book("\"Head First Java\", K.Sierra, B.Bates");
+import java.util.ArrayList;
+import java.util.List;
 
+public class Library implements Composite {
+    private List<Composite> readers;
+
+    public Library(List<Composite> readers) {
+        this.readers = readers;
+    }
+
+    public Library() {
+        readers = new ArrayList<>();
+    }
+
+    public void addReader(LibraryReader reader) {
+        readers.add(reader);
+    }
+
+
+    @Override
+    public List<Composite> getChild() {
+        return readers;
+    }
+
+    @Override
+    public String toString() {
+        return "Библиотека UIT:";
     }
 }

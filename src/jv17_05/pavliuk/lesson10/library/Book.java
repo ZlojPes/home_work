@@ -1,6 +1,8 @@
 package jv17_05.pavliuk.lesson10.library;
 
-public class Book implements Printable {
+import java.util.List;
+
+public class Book implements Composite {
     private String name;
     private static int counter;
     private int inventoryNumber;
@@ -18,12 +20,12 @@ public class Book implements Printable {
         return counter;
     }
 
-    public Printable[] getChild() {
+    public List getChild() {
         return null;
     }
 
     @Override
     public String toString() {
-        return "Book #" + inventoryNumber + "\"" + name + "\"";
+        return "Book #" + inventoryNumber + " " + name;
     }
 }
