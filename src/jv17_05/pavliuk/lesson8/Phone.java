@@ -4,11 +4,13 @@ public class Phone {
     private long number;
     private int weight;
     private String model;
+    private static int counter;
 
     public Phone() {
         number = 0;
         weight = 100;
         model = "Default model";
+        counter++;
     }
 
     public Phone(long number, int weight, String model) {
@@ -26,12 +28,11 @@ public class Phone {
         System.out.println("Звонит " + callerName + " {" + number + "}");
     }
 
-    public void sendMessage(long ... nums){
-        for(long num:nums){
-            System.out.println("Передача сообщения на номер "+num);
+    public void sendMessage(long... nums) {
+        for (long num : nums) {
+            System.out.println("Передача сообщения на номер " + num);
         }
     }
-
 
 
     public long getNumber() {
@@ -64,6 +65,7 @@ public class Phone {
         System.out.println(phone2.getNumber());
         System.out.println(phone3.getNumber());
         phone1.sendMessage(380991234567L, 380579876543L, 380664321765L);
+        System.out.println("Кол-во телефонов: " + counter);
     }
 
     @Override
