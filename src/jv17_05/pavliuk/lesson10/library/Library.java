@@ -6,10 +6,6 @@ import java.util.List;
 public class Library implements Composite {
     private List<Composite> readers;
 
-    public Library(List<Composite> readers) {
-        this.readers = readers;
-    }
-
     public Library() {
         readers = new ArrayList<>();
     }
@@ -18,8 +14,12 @@ public class Library implements Composite {
         readers.add(reader);
     }
 
+    public int getInventoryNumber() {
+        return -1;
+    }
+
     @Override
-    public List<Composite> getChild() {
+    public List getChild() {
         return readers;
     }
 

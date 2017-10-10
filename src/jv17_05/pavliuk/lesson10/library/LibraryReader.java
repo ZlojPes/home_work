@@ -1,7 +1,6 @@
 package jv17_05.pavliuk.lesson10.library;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class LibraryReader implements Composite {
     private String name;
@@ -15,21 +14,29 @@ public class LibraryReader implements Composite {
         books = new ArrayList<>();
     }
 
-    public void addBook(Book book) {
+    public void takeBook(Book book) {
         books.add(book);
     }
 
-    @Override
-    public List<Composite> getChild() {
-        return books;
+    public void returnBook(Book book) {
+        books.remove(book);
     }
 
     public static int getCounter() {
         return userCounter;
     }
 
+    public int getInventoryNumber() {
+        return -1;
+    }
+
+    @Override
+    public List getChild() {
+        return books;
+    }
+
     @Override
     public String toString() {
-        return "Читатель " + name;
+        return "Читатель " + name + " (читательский билет №" + readersTicketNumber + ")";
     }
 }

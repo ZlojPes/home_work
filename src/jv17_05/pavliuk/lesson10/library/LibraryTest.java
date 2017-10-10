@@ -5,6 +5,8 @@ import java.util.List;
 
 public class LibraryTest {
 
+    boolean searchSuccess;
+
     public static void main(String[] args) {
 
         Library library = new Library();
@@ -15,25 +17,52 @@ public class LibraryTest {
         Book b5 = new Book("\"Head First Java\", K.Sierra, B.Bates");
         Book b6 = new Book("\"Java. The complete reference\", H.Schildt");
 
-        LibraryReader r1 = new LibraryReader("Александр Павлюк");
-        LibraryReader r2 = new LibraryReader("Дарья Старкова");
-        LibraryReader r3 = new LibraryReader("Алексей Цуканов");
+        LibraryReader alex = new LibraryReader("Александр Павлюк");
+        LibraryReader dasha = new LibraryReader("Дарья Старкова");
+        LibraryReader lesha = new LibraryReader("Алексей Цуканов");
 
-        r1.addBook(b1);
-        r1.addBook(b2);
-        r1.addBook(b3);
-        r2.addBook(b4);
-        r2.addBook(b5);
-        r3.addBook(b6);
+        alex.takeBook(b1);
+        alex.takeBook(b2);
+        alex.takeBook(b3);
+        dasha.takeBook(b4);
+        dasha.takeBook(b5);
+        lesha.takeBook(b6);
 
-        library.addReader(r1);
-        library.addReader(r2);
-        library.addReader(r3);
+        library.addReader(alex);
+        library.addReader(dasha);
+        library.addReader(lesha);
 
         List<Composite> libList = new ArrayList<Composite>();
         libList.add(library);
 
-        new LibraryTest().print(libList);
+        LibraryTest test = new LibraryTest();
+        test.print(libList);
+        test.search(library, 6);
+    }
+
+    public void search(Composite element, int bookNumber) {
+        this.searchSuccess = false;
+        System.out.print("Держатель книги №" + bookNumber + ": ");
+        searchEngine(element, bookNumber);
+        if (!this.searchSuccess) {
+            System.out.println("не найден!");
+        }
+    }
+
+    public void searchEngine(Composite element, int bookNumber) {
+        List<Composite> list = element.getChild();
+        LibraryReader holder = null;
+        if (list != null) {
+            for (Composite el : list) {
+                if (el.getInventoryNumber() == -1) {
+                    searchEngine(el, bookNumber);
+                }
+                if (el.getInventoryNumber() == bookNumber) {
+                    System.out.println(element);
+                    searchSuccess = true;
+                }
+            }
+        }
     }
 
     public void print(List<Composite> list) {

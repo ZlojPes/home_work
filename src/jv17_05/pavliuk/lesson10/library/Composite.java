@@ -4,4 +4,6 @@ import java.util.List;
 
 public interface Composite {
     public List<Composite> getChild();
+
+    public int getInventoryNumber();
 }

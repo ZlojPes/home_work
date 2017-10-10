@@ -12,12 +12,8 @@ public class Book implements Composite {
         inventoryNumber = ++counter;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public static int getCounter() {
-        return counter;
+    public int getInventoryNumber() {
+        return inventoryNumber;
     }
 
     public List getChild() {
