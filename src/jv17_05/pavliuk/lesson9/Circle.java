@@ -2,6 +2,7 @@ package jv17_05.pavliuk.lesson9;
 
 public class Circle {
     private int radius;
+    static final double PI=3.1415926;
 
     Circle(int radius) {
         this.radius = radius;
@@ -12,11 +13,11 @@ public class Circle {
     }
 
     public double getArea() {
-        return Math.PI * radius * radius;
+        return PI * radius * radius;
     }
 
     public double getCircumference() {
-        return Math.PI * radius * 2;
+        return PI * radius * 2;
     }
 
     public static void main(String[] args) {

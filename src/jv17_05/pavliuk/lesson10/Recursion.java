@@ -10,8 +10,15 @@ public class Recursion {
 
     public void print(int current) {
         System.out.println(current);
-        if (current++ < end) {
+        label:
+        while (current != end) {
+            if(current<end){
+                current++;
+            }else {
+                current--;
+            }
             print(current);
+            break label;
         }
     }
 
@@ -20,7 +27,7 @@ public class Recursion {
     }
 
     public static void main(String[] args) {
-        Recursion test = new Recursion(5, 10);
+        Recursion test = new Recursion(10, 2);
         test.print(test.getStart());
     }
 }
