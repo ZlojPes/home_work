@@ -51,7 +51,6 @@ public class LibraryTest {
 
     public void searchEngine(Composite element, int bookNumber) {
         List<Composite> list = element.getChild();
-        LibraryReader holder = null;
         if (list != null) {
             for (Composite el : list) {
                 if (el.getInventoryNumber() == -1) {
