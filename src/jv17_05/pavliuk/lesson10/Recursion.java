@@ -12,9 +12,9 @@ public class Recursion {
         System.out.println(current);
         label:
         while (current != end) {
-            if(current<end){
+            if (current < end) {
                 current++;
-            }else {
+            } else {
                 current--;
             }
             print(current);
