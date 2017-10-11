@@ -34,7 +34,6 @@ public class Phone {
         }
     }
 
-
     public long getNumber() {
         return number;
     }
@@ -45,6 +44,10 @@ public class Phone {
 
     public String getModel() {
         return model;
+    }
+
+    public static int getCounter() {
+        return counter;
     }
 
     public static void main(String[] args) {

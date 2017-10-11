@@ -14,12 +14,13 @@ public class Library implements Composite {
         readers.add(reader);
     }
 
+    @Override
     public int getInventoryNumber() {
         return -1;
     }
 
     @Override
-    public List getChild() {
+    public List<Composite> getChild() {
         return readers;
     }
 

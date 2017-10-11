@@ -10,15 +10,13 @@ public class Recursion {
 
     public void print(int current) {
         System.out.println(current);
-        label:
-        while (current != end) {
+        if (current != end) {
             if (current < end) {
                 current++;
             } else {
                 current--;
             }
             print(current);
-            break label;
         }
     }
 

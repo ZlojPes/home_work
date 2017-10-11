@@ -12,11 +12,17 @@ public class Book implements Composite {
         inventoryNumber = ++counter;
     }
 
+    public static int getCounter() {
+        return counter;
+    }
+
+    @Override
     public int getInventoryNumber() {
         return inventoryNumber;
     }
 
-    public List getChild() {
+    @Override
+    public List<Composite> getChild() {
         return null;
     }
 

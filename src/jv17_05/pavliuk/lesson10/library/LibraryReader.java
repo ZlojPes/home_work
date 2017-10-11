@@ -18,20 +18,29 @@ public class LibraryReader implements Composite {
         books.add(book);
     }
 
+    public void takeBook(Book... books) {
+        this.books.addAll(Arrays.asList(books));
+    }
+
     public void returnBook(Book book) {
         books.remove(book);
+    }
+
+    public void returnBook(Book... books) {
+        this.books.removeAll(Arrays.asList(books));
     }
 
     public static int getCounter() {
         return userCounter;
     }
 
+    @Override
     public int getInventoryNumber() {
         return -1;
     }
 
     @Override
-    public List getChild() {
+    public List<Composite> getChild() {
         return books;
     }
 
