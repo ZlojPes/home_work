@@ -2,7 +2,7 @@ package jv17_05.pavliuk.lesson9;
 
 public class Circle {
     private int radius;
-    public static final double PI=3.1415926;
+    public static final double PI = 3.1415926;
 
     public Circle(int radius) {
         this.radius = radius;
