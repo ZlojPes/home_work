@@ -4,7 +4,7 @@ public class Circle {
     private int radius;
     public static final double PI=3.1415926;
 
-     public Circle(int radius) {
+    public Circle(int radius) {
         this.radius = radius;
     }
 
