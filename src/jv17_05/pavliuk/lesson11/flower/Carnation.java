@@ -15,6 +15,11 @@ public class Carnation extends Flower {
         return 30;
     }
 
+    @Override
+    public String toString() {
+        return "Гвоздика (хранение: " + SHELF_LIFE + super.toString();
+    }
+
     public static int getCarnationCounter() {
         return carnationCounter;
     }

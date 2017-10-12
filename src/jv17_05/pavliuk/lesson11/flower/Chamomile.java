@@ -15,6 +15,11 @@ public class Chamomile extends Flower {
         return 15;
     }
 
+    @Override
+    public String toString() {
+        return "Ромашка (хранение: " + SHELF_LIFE + super.toString();
+    }
+
     public static int getChamomileCounter() {
         return chamomileCounter;
     }

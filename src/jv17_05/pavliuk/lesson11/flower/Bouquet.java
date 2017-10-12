@@ -1,14 +1,30 @@
 package jv17_05.pavliuk.lesson11.flower;
 
-public class Bouquet {
-        private int flowersNumber;
-        private Flower[] flowers;
+public final class Bouquet {
 
-    public Bouquet(int flowersNumber) {
-        this.flowersNumber = flowersNumber;
+    private Bouquet() {
     }
 
-    public Flower[] getFlowers() {
-        return flowers;
+    public static Flower[] getBouquet(int flowersNumber) {
+        Flower[] bouquet = new Flower[flowersNumber];
+        for (int i = 0; i < flowersNumber; i++) {
+            switch ((int) (Math.random() * 5)) {
+                case (0):
+                    bouquet[i] = new Carnation("Ukraine");
+                    break;
+                case (1):
+                    bouquet[i] = new Chamomile("Russia");
+                    break;
+                case (2):
+                    bouquet[i] = new Chrysanthemum("Belarus");
+                    break;
+                case (3):
+                    bouquet[i] = new Rose("Ukraine");
+                    break;
+                default:
+                    bouquet[i] = new Tulip("Netherlands");
+            }
+        }
+        return bouquet;
     }
 }

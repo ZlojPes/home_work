@@ -15,6 +15,11 @@ public class Chrysanthemum extends Flower {
         return 30;
     }
 
+    @Override
+    public String toString() {
+        return "Хризантема (хранение: " + SHELF_LIFE + super.toString();
+    }
+
     public static int getChrysanthemumCounter() {
         return chrysanthemumCounter;
     }

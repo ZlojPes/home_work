@@ -17,4 +17,9 @@ public abstract class Flower {
     public String getCountryOfOrigin() {
         return countryOfOrigin;
     }
+
+    @Override
+    public String toString() {
+        return " дней; страна: " + countryOfOrigin + "; цена: " + getCost() + " грн.";
+    }
 }
