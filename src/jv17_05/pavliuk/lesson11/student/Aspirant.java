@@ -1,4 +1,4 @@
-package jv17_05.pavliuk.lesson11;
+package jv17_05.pavliuk.lesson11.student;
 
 /**
  * Created by Student on 11.10.2017.
