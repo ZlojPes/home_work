@@ -6,7 +6,6 @@ public class Aspirant extends Student {
     public Aspirant(String firstName, String lastName, String group, String scienseWork) {
         super(firstName, lastName, group);
         this.scienseWork = scienseWork;
-
     }
 
     public int getScholarship(){
