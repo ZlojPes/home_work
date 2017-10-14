@@ -6,7 +6,6 @@ public class Tulip extends Flower {
 
     public Tulip(String countryOfOrigin) {
         super(countryOfOrigin);
-        overallCounter++;
         tulipCounter++;
     }
 

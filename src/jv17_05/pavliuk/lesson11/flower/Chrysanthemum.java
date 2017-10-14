@@ -6,7 +6,6 @@ public class Chrysanthemum extends Flower {
 
     public Chrysanthemum(String countryOfOrigin) {
         super(countryOfOrigin);
-        overallCounter++;
         chrysanthemumCounter++;
     }
 

@@ -20,7 +20,7 @@ public class FlowerShop {
         System.out.println("\nВсего продано гвоздик:" + Carnation.getCarnationCounter() + "; ромашек " + Chamomile.getChamomileCounter()
                 + "; хризантем " + Chrysanthemum.getChrysanthemumCounter() + "; роз " + Rose.getRoseCounter() + "; тюльпанов " +
                 Tulip.getTulipCounter());
-        System.out.println("Всего продано: " + Flower.getOverallCounter() + " цветов.");
+        System.out.println("Всего продано: " + Flower.getOverallCounter() + " цветков.");
 
     }
 

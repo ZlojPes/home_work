@@ -6,7 +6,6 @@ public class Carnation extends Flower {
 
     public Carnation(String countryOfOrigin) {
         super(countryOfOrigin);
-        overallCounter++;
         carnationCounter++;
     }
 

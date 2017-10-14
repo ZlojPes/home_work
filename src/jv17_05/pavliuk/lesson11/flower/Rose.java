@@ -6,7 +6,6 @@ public class Rose extends Flower {
 
     public Rose(String countryOfOrigin) {
         super(countryOfOrigin);
-        overallCounter++;
         roseCounter++;
     }
 

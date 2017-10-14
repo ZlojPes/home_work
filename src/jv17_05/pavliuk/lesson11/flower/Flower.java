@@ -6,6 +6,7 @@ public abstract class Flower {
 
     public Flower(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
+        overallCounter++;
     }
 
     public abstract int getCost();

@@ -6,7 +6,6 @@ public class Chamomile extends Flower {
 
     public Chamomile(String countryOfOrigin) {
         super(countryOfOrigin);
-        overallCounter++;
         chamomileCounter++;
     }
 
