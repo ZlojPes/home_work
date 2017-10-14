@@ -1,10 +1,7 @@
 package jv17_05.pavliuk.lesson11.student;
 
-/**
- * Created by Student on 11.10.2017.
- */
 public class Student {
-    public String firstName, lastName, group;
+    private String firstName, lastName, group;
 
     public Student(String firstName, String lastName, String group) {
         this.firstName = firstName;
@@ -12,11 +9,35 @@ public class Student {
         this.group = group;
     }
 
-    public int getScholarship(){
+    public int getScholarship() {
         return 100;
     }
 
-    public String toString(){
-        return firstName+" "+lastName+" Группа: "+group;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public String toString() {
+        return firstName + " " + lastName + " Группа: " + group;
     }
 }
