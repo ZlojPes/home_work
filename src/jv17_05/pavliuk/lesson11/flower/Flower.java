@@ -11,6 +11,10 @@ public abstract class Flower {
 
     public abstract int getCost();
 
+    public void setCountryOfOrigin(String countryOfOrigin) {
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
     public String getCountryOfOrigin() {
         return countryOfOrigin;
     }
