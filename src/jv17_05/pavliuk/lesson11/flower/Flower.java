@@ -4,10 +4,6 @@ public abstract class Flower {
     protected String countryOfOrigin;
     protected static int overallCounter;
 
-    public static int getOverallCounter() {
-        return overallCounter;
-    }
-
     public Flower(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
     }
@@ -18,8 +14,12 @@ public abstract class Flower {
         return countryOfOrigin;
     }
 
+    public static int getOverallCounter() {
+        return overallCounter;
+    }
+
     @Override
     public String toString() {
-        return " дней; страна: " + countryOfOrigin + "; цена: " + getCost() + " грн.";
+        return " дней; страна: " + countryOfOrigin + "; цена: " + getCost() + " грн.)";
     }
 }
