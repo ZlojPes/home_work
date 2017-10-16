@@ -1,4 +1,4 @@
-package jv17_05.pavliuk.lesson12;
+package jv17_05.pavliuk.lesson12.printable;
 
 public class Test {
     public static void main(String[] args) {
