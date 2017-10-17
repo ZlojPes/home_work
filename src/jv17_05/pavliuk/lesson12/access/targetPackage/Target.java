@@ -19,7 +19,7 @@ public class Target {
 
     public static void main(String[] args) {
         Target target = new Target();
-        target.privateAccess();   //access denied
+        target.privateAccess();   //access allowed
         target.packageAccess();   //access allowed
         target.protectedAccess(); //access allowed
         target.publicAccess();    //access allowed

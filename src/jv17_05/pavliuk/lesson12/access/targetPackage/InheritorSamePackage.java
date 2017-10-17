@@ -1,11 +1,11 @@
 package jv17_05.pavliuk.lesson12.access.targetPackage;
 
-public class InheritorSamePackage {
+public class InheritorSamePackage extends Target {
     public static void main(String[] args) {
-        Target target = new Target();
-//      target.privateAccess(); //access denied
-        target.packageAccess();   //access allowed
-        target.protectedAccess(); //access allowed
-        target.publicAccess();    //access allowed
+        InheritorSamePackage inheritor = new InheritorSamePackage();
+//      inheritor.privateAccess();   //access denied
+        inheritor.packageAccess();   //access allowed
+        inheritor.protectedAccess(); //access allowed
+        inheritor.publicAccess();    //access allowed
     }
 }
