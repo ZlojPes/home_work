@@ -10,5 +10,8 @@ public class Test {
         for (Printable current : array) {
             current.print();
         }
+
+        Book.printBooks(array);
+        Magazine.printMagazine(array);
     }
 }
