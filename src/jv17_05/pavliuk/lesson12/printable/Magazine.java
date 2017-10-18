@@ -6,9 +6,9 @@ public class Magazine implements Printable {
         System.out.println("Magazine");
     }
 
-    public static void printMagazine(Printable[] printable){
-        for (Printable current:printable){
-            if (current instanceof Magazine){
+    public static void printMagazine(Printable[] printable) {
+        for (Printable current : printable) {
+            if (current instanceof Magazine) {
                 System.out.println("printing Magazine");
             }
         }
