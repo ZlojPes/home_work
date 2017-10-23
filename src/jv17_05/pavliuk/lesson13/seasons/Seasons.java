@@ -19,7 +19,3 @@ public enum Seasons {
         return "is cold season";
     }
 }
-
-
-
-
