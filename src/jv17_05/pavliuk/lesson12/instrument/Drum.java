@@ -24,4 +24,19 @@ public class Drum implements Instrument {
     public String toString() {
         return "барабан размером " + size + " cm";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Drum drum = (Drum) o;
+
+        return size == drum.size;
+    }
+
+    @Override
+    public int hashCode() {
+        return size;
+    }
 }

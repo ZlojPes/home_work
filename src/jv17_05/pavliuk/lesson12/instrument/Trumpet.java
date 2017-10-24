@@ -24,4 +24,19 @@ public class Trumpet implements Instrument {
     public String toString() {
         return "труба диаметром " + diameter + " cm";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Trumpet trumpet = (Trumpet) o;
+
+        return diameter == trumpet.diameter;
+    }
+
+    @Override
+    public int hashCode() {
+        return diameter;
+    }
 }

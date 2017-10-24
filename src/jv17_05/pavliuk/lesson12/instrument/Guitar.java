@@ -25,4 +25,19 @@ public class Guitar implements Instrument {
         return "гитара с " + stringsNumber +
                 " струнами";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Guitar guitar = (Guitar) o;
+
+        return stringsNumber == guitar.stringsNumber;
+    }
+
+    @Override
+    public int hashCode() {
+        return stringsNumber;
+    }
 }
