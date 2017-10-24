@@ -26,4 +26,11 @@ public class Apple extends Fruit {
     public static int getTotalCost() {
         return totalCost;
     }
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "weight=" + weight +
+                '}';
+    }
 }

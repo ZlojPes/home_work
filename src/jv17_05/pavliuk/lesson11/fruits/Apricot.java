@@ -25,4 +25,11 @@ public class Apricot extends Fruit {
     public static int getTotalCost() {
         return totalCost;
     }
+
+    @Override
+    public String toString() {
+        return "Apricot{" +
+                "weight=" + weight +
+                '}';
+    }
 }

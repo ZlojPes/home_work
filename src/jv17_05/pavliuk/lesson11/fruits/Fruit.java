@@ -17,7 +17,7 @@ public abstract class Fruit {
         this.weight = weight;
     }
 
-    public void printManufacturerInfo() {
+    public final void printManufacturerInfo() {
         System.out.print("Made in Ukraine");
     }
 
@@ -26,4 +26,19 @@ public abstract class Fruit {
     }
 
     public abstract int getCost();
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Fruit fruit = (Fruit) o;
+
+        return weight == fruit.weight;
+    }
+
+    @Override
+    public int hashCode() {
+        return weight;
+    }
 }
