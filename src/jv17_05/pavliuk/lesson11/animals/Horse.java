@@ -18,7 +18,9 @@ public class Horse extends Animal {
 
     @Override
     public String toString() {
-        return "Horse";
+        return "Horse{" +
+                "horsePower=" + horsePower +
+                '}';
     }
 
     public void setHorsePower(int horsePower) {
@@ -26,6 +28,21 @@ public class Horse extends Animal {
     }
 
     public int getHorsePower() {
+        return horsePower;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Horse horse = (Horse) o;
+
+        return horsePower == horse.horsePower;
+    }
+
+    @Override
+    public int hashCode() {
         return horsePower;
     }
 }

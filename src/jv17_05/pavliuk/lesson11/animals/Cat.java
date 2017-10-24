@@ -18,7 +18,9 @@ public class Cat extends Animal {
 
     @Override
     public String toString() {
-        return "Cat";
+        return "Cat{" +
+                "mouseCatchSkillLevel=" + mouseCatchSkillLevel +
+                '}';
     }
 
     public void setMouseCatchSkillLevel(int mouseCatchSkillLevel) {
@@ -26,6 +28,21 @@ public class Cat extends Animal {
     }
 
     public int getMouseCatchSkillLevel() {
+        return mouseCatchSkillLevel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cat cat = (Cat) o;
+
+        return mouseCatchSkillLevel == cat.mouseCatchSkillLevel;
+    }
+
+    @Override
+    public int hashCode() {
         return mouseCatchSkillLevel;
     }
 }
