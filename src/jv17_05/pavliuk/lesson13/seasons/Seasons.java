@@ -11,7 +11,7 @@ public enum Seasons {
     AUTUMN(4);
     public int averageTemp;
 
-    private Seasons(int averageTemp) {
+    Seasons(int averageTemp) {
         this.averageTemp = averageTemp;
     }
 
