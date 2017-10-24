@@ -3,20 +3,18 @@ package jv17_05.pavliuk.lesson13.clothes;
 public class Atelier {
     public void dressMan(Clothes[] collection) {
         for (Clothes clothes : collection) {
-            try {
+            if (clothes instanceof ManClothes) {
                 ((ManClothes) clothes).dressMan();
                 System.out.println(clothes);
-            } catch (ClassCastException e) {
             }
         }
     }
 
     public void dressWoman(Clothes[] collection) {
         for (Clothes clothes : collection) {
-            try {
+            if (clothes instanceof WomanClothes) {
                 ((WomanClothes) clothes).dressWoman();
                 System.out.println(clothes);
-            } catch (ClassCastException e) {
             }
         }
     }
