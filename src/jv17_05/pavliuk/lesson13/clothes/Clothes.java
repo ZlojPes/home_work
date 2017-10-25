@@ -1,7 +1,7 @@
 package jv17_05.pavliuk.lesson13.clothes;
 
 public abstract class Clothes {
-    public Size size;
+    private Size size;
     private int price;
     private String color;
 
@@ -9,6 +9,10 @@ public abstract class Clothes {
         this.size = size;
         this.price = price;
         this.color = color;
+    }
+
+    public Size getSize() {
+        return size;
     }
 
     public int getPrice() {

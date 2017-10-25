@@ -17,6 +17,6 @@ public class Pants extends Clothes implements ManClothes, WomanClothes {
 
     @Override
     public String toString() {
-        return "Pants size:" + size + ", color: " + getColor() + ", price: " + getPrice();
+        return "Pants size:" + getSize() + ", color: " + getColor() + ", price: " + getPrice();
     }
 }

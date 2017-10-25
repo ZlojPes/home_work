@@ -12,6 +12,6 @@ public class Tie extends Clothes implements ManClothes {
 
     @Override
     public String toString() {
-        return "Tie size:" + size + ", color: " + getColor() + ", price: " + getPrice();
+        return "Tie size:" + getSize() + ", color: " + getColor() + ", price: " + getPrice();
     }
 }
