@@ -22,11 +22,18 @@ public class Person {
         System.out.println(fullName + " talks about Java");
     }
 
+    @Override
+    public String toString() {
+        return String.format("Person: %s age: %d", fullName, age);
+    }
+
     public static void main(String[] args) {
         Person first = new Person();
         Person second = new Person("Alexander Pavliuk", 35);
         first.talk();
         second.move();
         second.talk();
+        System.out.println(first);
+        System.out.println(second);
     }
 }
