@@ -10,6 +10,6 @@ public class MiddleOfTheString {
     public static String getMiddleSigns(String s) {
         StringBuilder sb = new StringBuilder(s);
         int start = s.length() / 2 - 1;
-        return sb.substring(start, start + 2).toString();
+        return sb.substring(start, start + 2);
     }
 }
