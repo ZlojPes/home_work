@@ -1,6 +1,8 @@
 package jv17_05.pavliuk.lesson15.employee;
 
 public class Report {
+    private static final int SHIFT = 6;
+
     private Report() {
     }
 
@@ -13,12 +15,12 @@ public class Report {
                 nameMaxLength = l;
             }
         }
-        System.out.printf("%-" + (nameMaxLength + 6) + "s%s%n", "n/n Employee", "Salary"); //Header
+        System.out.printf("%-" + (nameMaxLength + SHIFT) + "s%s%n", "n/n Employee", "Salary"); //Header
         for (Employee emp : employees) {
             count++;
             System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%n", count, emp.getFullName(), emp.getSalary());
             totalSalary += emp.getSalary();
         }
-        System.out.printf("%" + (nameMaxLength + 6) + "s%.2f$", "Total: ", totalSalary);  //Total string
+        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$", "Total: ", totalSalary);  //Total string
     }
 }
