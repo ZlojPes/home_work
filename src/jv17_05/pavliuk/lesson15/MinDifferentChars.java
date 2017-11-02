@@ -10,16 +10,22 @@ public class MinDifferentChars {
 
     public static String find(String input) {
         String out = "";
-        String[] words = input.split(" ");
-        Pattern p = Pattern.compile("[a-z0-9а-я]");
-        for (String word : words) {
-            int charCounter = 0;
-            Matcher m = p.matcher(word);
-            while (m.find()) {
-                charCounter++;
+        int outUniqueDigits = 0;
+        Pattern p = Pattern.compile("[a-zA-Z0-9а-яА-Я]+");
+        Matcher m = p.matcher(input);
+        while (m.find()) {
+            String word = m.group();
+            StringBuilder sb = new StringBuilder(word);
+            for (int i = 0; i < sb.length(); i++) {
+                String a = String.valueOf(sb.charAt(i));
+                int duplicateCharPosition;
+                while ((duplicateCharPosition = sb.indexOf(String.valueOf(sb.charAt(i)), (i + 1))) > i) {
+                    sb.deleteCharAt(duplicateCharPosition);
+                }
             }
-            if (charCounter < out.length() || out.equals("")) {
+            if (sb.length() < outUniqueDigits || out.equals("")) {
                 out = word;
+                outUniqueDigits = sb.length();
             }
         }
         return out;
