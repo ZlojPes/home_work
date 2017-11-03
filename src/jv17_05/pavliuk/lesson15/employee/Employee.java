@@ -1,12 +1,16 @@
 package jv17_05.pavliuk.lesson15.employee;
 
+import java.util.Date;
+
 public class Employee {
     private String fullName;
     private float salary;
+    private Date date;
 
-    public Employee(String fullName, float salary) {
+    public Employee(String fullName, float salary, Date date) {
         this.fullName = fullName;
         this.salary = salary;
+        this.date = date;
     }
 
     public String getFullName() {
