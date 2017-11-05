@@ -21,6 +21,6 @@ public class Report {
             System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%n", count, emp.getFullName(), emp.getSalary());
             totalSalary += emp.getSalary();
         }
-        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$", "Total: ", totalSalary);  //Total string
+        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$%n", "Total: ", totalSalary);  //Total string
     }
 }
