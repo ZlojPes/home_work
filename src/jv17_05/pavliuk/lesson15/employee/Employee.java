@@ -25,6 +25,14 @@ public class Employee {
         return salary;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     public void setSalary(float salary) {
         this.salary = salary;
     }
