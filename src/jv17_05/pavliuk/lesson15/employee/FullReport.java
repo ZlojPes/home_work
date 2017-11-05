@@ -23,12 +23,13 @@ public class FullReport {
         String s1 = new String(rb.getString("part1").getBytes("ISO-8859-1"), "UTF-8");
         String s2 = new String(rb.getString("part2").getBytes("ISO-8859-1"), "UTF-8");
         String s3 = new String(rb.getString("part3").getBytes("ISO-8859-1"), "UTF-8");
-        System.out.printf("%-" + (nameMaxLength + SHIFT) + "s%s%n", s1,s2); //Header
+        String s4 = new String(rb.getString("part4").getBytes("ISO-8859-1"), "UTF-8");
+        System.out.printf("%-" + (nameMaxLength + SHIFT) + "s%-10s%s%n", s1, s2, s4); //Header
         for (Employee emp : employees) {
             count++;
-            System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%n", count, emp.getFullName(), emp.getSalary());
+            System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%30s%n", count, emp.getFullName(), emp.getSalary(),emp.getDate());
             totalSalary += emp.getSalary();
         }
-        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$",s3, totalSalary);  //Total string
+        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$", s3, totalSalary);  //Total string
     }
 }
