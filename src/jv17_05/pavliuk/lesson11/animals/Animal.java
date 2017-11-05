@@ -1,6 +1,8 @@
 package jv17_05.pavliuk.lesson11.animals;
 
-public class Animal {
+import java.io.Serializable;
+
+public class Animal implements Serializable {
     private String food;
     private String location;
 

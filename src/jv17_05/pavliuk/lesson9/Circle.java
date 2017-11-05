@@ -24,6 +24,13 @@ public class Circle {
         return PI * radius * 2;
     }
 
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                '}';
+    }
+
     public static void main(String[] args) {
         Circle circle1 = new Circle(10);
         Circle circle2 = new Circle(5);
