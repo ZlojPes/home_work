@@ -11,9 +11,9 @@ public class TestEmployee {
         Employee e3 = new Employee("Sidorov Alexey", getSalary(), new Date(1510047953673L));
         Employee e4 = new Employee("Petrov Ivan", getSalary(), new Date(1510045953673L));
         Employee[] array = {e1, e2, e3, e4};
-//        Report.generateReport(array);
-//        System.out.println();
-        FullReport.generateReport(array,new Locale("ru","RU"));
+        FullReport.generateReport(array, new Locale("", ""));
+        System.out.println();
+        FullReport.generateReport(array, new Locale("ru", "RU"));
     }
 
     private static float getSalary() {

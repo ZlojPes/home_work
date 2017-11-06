@@ -14,7 +14,7 @@ public class Holiday {
 
     @Override
     public String toString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM", customDateFormatSymbols);
+        DateFormat dateFormat = new SimpleDateFormat("dd MMMM", customDateFormatSymbols);
         return String.format("%-13s%s", dateFormat.format(calendar.getTime()), name);
     }
 

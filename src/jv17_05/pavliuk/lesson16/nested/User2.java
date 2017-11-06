@@ -1,4 +1,4 @@
-package jv17_05.pavliuk.lesson16;
+package jv17_05.pavliuk.lesson16.nested;
 
 public class User2 {
     private String login, password;
@@ -18,7 +18,7 @@ public class User2 {
     }
 
     public static void main(String[] args) {
-        User2 user = new User2("Tanya", "123456");
+        User2 user = new User2("Sveta", "123456");
         user.createQuery();
     }
 }

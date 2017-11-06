@@ -4,9 +4,6 @@ import jv17_05.pavliuk.lesson11.animals.Animal;
 
 import java.io.Serializable;
 
-/**
- * Created by student on 11/5/2017.
- */
 public class Generics<T extends Comparable, V extends Animal & Serializable, K extends Number> {
     private T t1;
     private V v1;

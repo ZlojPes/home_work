@@ -1,18 +1,14 @@
-package jv17_05.pavliuk.lesson16;
+package jv17_05.pavliuk.lesson16.nested;
 
-/**
- * Created by Student on 01.11.2017.
- */
-public class User3 {
+public class User {
+    private String login, password;
 
-    private static String login, password;
-
-    public User3(String login, String password) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
     }
 
-    static class Query {
+    class Query {
         public void printToLog() {
             System.out.println("query from user '" + login + "' with password '" + password + "' has been received");
         }
@@ -23,8 +19,8 @@ public class User3 {
     }
 
     public static void main(String[] args) {
-        User3 user = new User3("Kolya", "123456");
+        User user = new User("Kolya", "123456");
         user.createQuery();
-        new User3.Query().printToLog();
+        new User("Petya", "password").new Query().printToLog();
     }
 }

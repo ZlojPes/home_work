@@ -1,6 +1,7 @@
 package jv17_05.pavliuk.lesson15.employee;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -12,6 +13,7 @@ public class FullReport {
 
     public static void generateReport(Employee[] employees, Locale locale) throws UnsupportedEncodingException {
         ResourceBundle rb = ResourceBundle.getBundle("report", locale);
+        DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT);
         int count = 0, nameMaxLength = 0;
         float totalSalary = 0;
         for (Employee emp : employees) {
@@ -27,9 +29,9 @@ public class FullReport {
         System.out.printf("%-" + (nameMaxLength + SHIFT) + "s%-10s%s%n", s1, s2, s4); //Header
         for (Employee emp : employees) {
             count++;
-            System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%30s%n", count, emp.getFullName(), emp.getSalary(),emp.getDate());
+            System.out.printf(" %-3d%-" + nameMaxLength + "s  %.2f$%10s%n", count, emp.getFullName(), emp.getSalary(), df.format(emp.getDate()));
             totalSalary += emp.getSalary();
         }
-        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$", s3, totalSalary);  //Total string
+        System.out.printf("%" + (nameMaxLength + SHIFT) + "s%.2f$%n", s3, totalSalary);  //Total string
     }
 }

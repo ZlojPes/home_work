@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class MinDifferentChars {
     public static void main(String[] args) {
-        System.out.println(find("Найти слово, в котором число различных символов минимально."));
+        System.out.println(find("Найти слово, содержащее наименьшее количество уникальных символов."));
     }
 
     public static String find(String input) {
