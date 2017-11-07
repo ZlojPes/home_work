@@ -1,6 +1,6 @@
 package jv17_05.pavliuk.lesson16.generics;
 
-import jv17_05.pavliuk.lesson11.animals.Animal;
+import jv17_05.pavliuk.lesson10.animals.Animal;
 
 import java.io.Serializable;
 
