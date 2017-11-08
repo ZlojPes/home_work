@@ -71,7 +71,7 @@ public class Matrix<T extends Number> {
 
     public static void main(String[] args) {
         Matrix<Integer> matrix = new Matrix<>(new Integer[][]{{1, 2, 3}, {2, 3, 4}});
-        Matrix<Integer> anotherMatrix = new Matrix<>(new Integer[][]{{2, 3, 4}, {3, 4, 5}});
+        Matrix<Short> anotherMatrix = new Matrix<>(new Short[][]{{2, 3, 4}, {3, 4, 5}});
         matrix.print();
         System.out.println("+");
         anotherMatrix.print();
