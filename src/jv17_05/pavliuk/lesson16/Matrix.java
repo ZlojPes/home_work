@@ -12,9 +12,9 @@ public class Matrix<T extends Number> {
         columns = array[0].length;
     }
 
-    public Matrix sum(Matrix anotherMatrix) {
+    public Matrix sum(Matrix<?> anotherMatrix) {
         Double array[][] = anotherMatrix.getMatrixArray();
-        if (array.length != this.array.length) {
+        if (array.length != rows) {
             throw new UnsupportedOperationException("Складываемые матрицы должны быть равны!");
         }
         Double[][] resultArray = new Double[rows][columns];
@@ -26,7 +26,7 @@ public class Matrix<T extends Number> {
                 resultArray[i][j] = array[i][j] + this.array[i][j].doubleValue();
             }
         }
-        return new Matrix(resultArray);
+        return new Matrix<>(resultArray);
     }
 
     public void multiply(int multiplier) {
@@ -44,10 +44,9 @@ public class Matrix<T extends Number> {
     }
 
     public Double[][] getMatrixArray() {
-        int l = array.length, m = array[0].length;
-        Double out[][] = new Double[l][m];
-        for (int i = 0; i < l; i++) {
-            for (int j = 0; j < m; j++) {
+        Double out[][] = new Double[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
                 out[i][j] = array[i][j].doubleValue();
             }
         }
@@ -62,17 +61,17 @@ public class Matrix<T extends Number> {
         return columns;
     }
 
-    void print(T[][] array) {
+    public void print(T[][] array) {
         System.out.println(Arrays.deepToString(array));
     }
 
-    void print() {
+    public void print() {
         System.out.println(Arrays.deepToString(array));
     }
 
     public static void main(String[] args) {
-        Matrix<Integer> matrix = new Matrix(new Integer[][]{{1, 2, 3}, {2, 3, 4}});
-        Matrix<Integer> anotherMatrix = new Matrix(new Integer[][]{{2, 3, 4}, {3, 4, 5}});
+        Matrix<Integer> matrix = new Matrix<>(new Integer[][]{{1, 2, 3}, {2, 3, 4}});
+        Matrix<Integer> anotherMatrix = new Matrix<>(new Integer[][]{{2, 3, 4}, {3, 4, 5}});
         matrix.print();
         System.out.println("+");
         anotherMatrix.print();
