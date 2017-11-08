@@ -12,7 +12,7 @@ public class Matrix<T extends Number> {
         columns = array[0].length;
     }
 
-    public Matrix sum(Matrix<?> anotherMatrix) {
+    public Matrix<Double> sum(Matrix<?> anotherMatrix) {
         Double array[][] = anotherMatrix.getMatrixArray();
         if (array.length != rows) {
             throw new UnsupportedOperationException("Складываемые матрицы должны быть равны!");
