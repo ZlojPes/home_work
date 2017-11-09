@@ -17,9 +17,9 @@ public class MinDifferentChars {
             String word = m.group();
             StringBuilder sb = new StringBuilder(word);
             for (int i = 0; i < sb.length(); i++) {
-                String a = String.valueOf(sb.charAt(i));
+                String letter = String.valueOf(sb.charAt(i));
                 int duplicateCharPosition;
-                while ((duplicateCharPosition = sb.indexOf(String.valueOf(sb.charAt(i)), (i + 1))) > i) {
+                while ((duplicateCharPosition = sb.indexOf(letter, (i + 1))) > 0) {
                     sb.deleteCharAt(duplicateCharPosition);
                 }
             }

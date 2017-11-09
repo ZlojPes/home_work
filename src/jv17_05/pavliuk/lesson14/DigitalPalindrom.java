@@ -9,14 +9,14 @@ public class DigitalPalindrom {
     }
 
     private static String find(String input) {
-        String buffer;
+        String word;
         Pattern p = Pattern.compile("[0-9]+");
         Matcher m = p.matcher(input);
         while (m.find()) {
-            buffer = m.group();
-            StringBuilder sb = new StringBuilder(m.group()).reverse();
-            if (new StringBuilder(m.group()).reverse().toString().equals(buffer)) {
-                return buffer;
+            word = m.group();
+            String reverseWord = new StringBuilder(m.group()).reverse().toString();
+            if (reverseWord.equals(word)) {
+                return word;
             }
         }
         return "There's no digital palindrome";
