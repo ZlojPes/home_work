@@ -1,18 +1,18 @@
-package jv17_05.pavliuk.lesson17.set_actions;
+package jv17_05.pavliuk.lesson17;
 
 import java.util.*;
 
-public class SetDemo {
+public class SetActions {
     public static Set<?> intersect(Set<?> set1, Set<?> set2) {
         Iterator<?> iterator = set1.iterator();
         Set<Object> out = new HashSet<>();
         while (iterator.hasNext()) {
             Object o = iterator.next();
-            if (!set2.contains(o)) {
-                iterator.remove();
+            if (set2.contains(o)) {
+                out.add(o);
             }
         }
-        return set1;
+        return out;
     }
 
     public static Set<?> union(Set<?> set1, Set<?> set2) {
@@ -33,15 +33,15 @@ public class SetDemo {
         set1.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
         Set<Integer> set2 = new TreeSet<>();
         set2.addAll(Arrays.asList(5, 6, 7, 8, 9, 10));
-        Set<?> out1 = intersect(set1, set2);
-        Set<?> out2 = union(set1, set2);
-        print(out1);
-        print(out2);
+        System.out.print("Intersect: ");
+        print(intersect(set1, set2));
+        System.out.print("Union: ");
+        print(union(set1, set2));
     }
 
     public static void print(Set<?> set) {
         for (Object aSet : set) {
-            System.out.print(aSet+", ");
+            System.out.print(aSet + ", ");
         }
         System.out.println();
     }
