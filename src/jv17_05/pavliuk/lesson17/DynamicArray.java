@@ -2,8 +2,7 @@ package jv17_05.pavliuk.lesson17;
 
 import jv17_05.pavliuk.lesson9.Circle;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class DynamicArray {
     public static void main(String[] args) {

@@ -2,12 +2,8 @@ package jv17_05.pavliuk.lesson17;
 
 import jv17_05.pavliuk.lesson17.treeset.HeavyBox;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
 
-/**
- * Created by student on 11/12/2017.
- */
 public class HeavyBoxDeque {
     public static void main(String[] args) {
         Deque<HeavyBox> deque = new ArrayDeque<>();
