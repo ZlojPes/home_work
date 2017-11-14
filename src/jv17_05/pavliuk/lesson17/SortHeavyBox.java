@@ -16,8 +16,8 @@ public class SortHeavyBox {
         boxSet.add(new HeavyBox(1, 2, 3, 425));
         boxSet.add(new HeavyBox(1, 2, 3, 14));
         boxSet.add(new HeavyBox(1, 2, 3, 1024));
-        System.out.println("More than 300:"+sort(boxSet));
-        System.out.println("Less than 300:"+boxSet);
+        System.out.println("More than 300:" + sort(boxSet));
+        System.out.println("Less than 300:" + boxSet);
     }
 
     private static Set<HeavyBox> sort(Set<HeavyBox> boxSet) {

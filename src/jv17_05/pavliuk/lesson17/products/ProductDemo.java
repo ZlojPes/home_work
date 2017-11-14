@@ -22,7 +22,12 @@ public class ProductDemo {
                 new Product("T-Shirt", 254.38f, 29),
                 new Product("Cap", 198.19f, 8)
         )));
+        System.out.println("Сортировка по цене:");
         print(byPrice, electronics, furniture, clothes);
+        System.out.println("Сортировка по имени:");
+        print(byName, electronics, furniture, clothes);
+        System.out.println("Сортировка по рейтингу:");
+        print(byRating, electronics, furniture, clothes);
     }
 
     public static void print(Comparator<Product> comparator, Category... categories) {
@@ -33,5 +38,6 @@ public class ProductDemo {
         for (Product p : set) {
             System.out.println(p);
         }
+        System.out.println("************************************************");
     }
 }

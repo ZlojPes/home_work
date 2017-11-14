@@ -1,10 +1,10 @@
 package jv17_05.pavliuk.lesson17.treeset;
 
-import java.util.TreeSet;
+import java.util.*;
 
 public class TreeSetTest {
     public static void main(String[] args) {
-        TreeSet<HeavyBox> boxSet = new TreeSet<>();
+        Set<HeavyBox> boxSet = new TreeSet<>();
         boxSet.add(new HeavyBox(1, 2, 3, 5));
         boxSet.add(new HeavyBox(1, 2, 3, 50));
         boxSet.add(new HeavyBox(1, 2, 3, 25));

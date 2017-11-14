@@ -4,27 +4,15 @@ import java.util.*;
 
 public class SetActions {
     public static Set<?> intersect(Set<?> set1, Set<?> set2) {
-        Iterator<?> iterator = set1.iterator();
-        Set<Object> out = new HashSet<>();
-        while (iterator.hasNext()) {
-            Object o = iterator.next();
-            if (set2.contains(o)) {
-                out.add(o);
-            }
-        }
+        Set<Object> out = new HashSet<>(set1);
+        out.retainAll(set2);
         return out;
     }
 
     public static Set<?> union(Set<?> set1, Set<?> set2) {
-        Iterator<?> iterator = set1.iterator();
-        Iterator<?> iterator2 = set2.iterator();
         Set<Object> out = new HashSet<>();
-        while (iterator.hasNext()) {
-            out.add(iterator.next());
-        }
-        while (iterator2.hasNext()) {
-            out.add(iterator2.next());
-        }
+        out.addAll(set1);
+        out.addAll(set2);
         return out;
     }
 
