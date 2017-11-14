@@ -89,7 +89,7 @@ public class Student {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>(Arrays.asList(
                 new Student("Петров", 2, "ART5", 2, 3, 4, 5, 3, 2),
-                new Student("Иванов", 4, "Tech2", 4, 3, 2, 5, 3, 2, 4),
+                new Student("Иванов", 2, "Tech2", 4, 3, 2, 5, 3, 2, 4),
                 new Student("Сидоров", 3, "Hum3", 2, 3, 4, 2, 2, 2, 3, 2),
                 new Student("Пупкин", 2, "Hum3", 2, 3, 4, 5, 4, 3, 2, 2, 2, 2),
                 new Student("Nguen", 1, "Hum3", 3, 4, 5, 3, 4, 5, 4, 3, 2, 3, 5)
