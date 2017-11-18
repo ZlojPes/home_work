@@ -28,17 +28,14 @@ public class ToyDemo {
     private static void iterateKeys(Map<String, Toy> toys) {
         Set<String> set = toys.keySet();
         for (String key : toys.keySet()) {
-            System.out.println("Ключ: " + key + "Значение: " + toys.get(key));
+            System.out.println("Ключ: " + key + " Значение: " + toys.get(key));
         }
     }
 
     private static void iterateEntry(Map<String, Toy> toys) {
         Set<Map.Entry<String, Toy>> set = toys.entrySet();
         for (Map.Entry<String, Toy> entry : set) {
-            System.out.print("Ключ: " + entry.getKey() + "  ");
-            System.out.println("Значение: " + entry.getValue());
+            System.out.println("Ключ: " + entry.getKey() + " Значение: " + entry.getValue());
         }
     }
-
-
 }
