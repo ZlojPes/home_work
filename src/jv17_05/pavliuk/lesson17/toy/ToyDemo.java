@@ -26,7 +26,6 @@ public class ToyDemo {
     }
 
     private static void iterateKeys(Map<String, Toy> toys) {
-        Set<String> set = toys.keySet();
         for (String key : toys.keySet()) {
             System.out.println("Ключ: " + key + " Значение: " + toys.get(key));
         }
