@@ -97,11 +97,12 @@ public class Student {
         Iterator<Student> iterator = students.listIterator();
         while (iterator.hasNext()) {
             Student s = iterator.next();
+            System.out.print("Студент " + s.getName());
             if (s.getAverageMark() < 3) {
-                System.out.println("Студент " + s.getName() + " отчисляется за неуспеваемость");
+                System.out.println(" отчисляется за неуспеваемость");
                 iterator.remove();
             } else {
-                System.out.println("Студент " + s.getName() + " переводится на следующий курс");
+                System.out.println(" переводится на следующий курс");
                 s.setCourse(s.getCourse() + 1);
             }
         }

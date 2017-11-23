@@ -10,9 +10,10 @@ public class CopyFile {
     }
 
     private static boolean copy(File source, File dest) {
-        try (FileReader reader = new FileReader(source); FileWriter writer = new FileWriter(dest)) {
-            BufferedReader bReader = new BufferedReader(reader);
-            BufferedWriter bWriter = new BufferedWriter(writer);
+        try (FileReader reader = new FileReader(source);
+             FileWriter writer = new FileWriter(dest);
+             BufferedReader bReader = new BufferedReader(reader);
+             BufferedWriter bWriter = new BufferedWriter(writer);) {
             String s;
             while ((s = bReader.readLine()) != null) {
                 bWriter.write(s);
