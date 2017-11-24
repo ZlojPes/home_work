@@ -12,28 +12,28 @@ public class Philosopher extends Thread {
 
     public void run() {
         while (true) {
-            if(leftFork.getNumber()<rightFork.getNumber()){
-                synchronized (leftFork){
-                    synchronized (rightFork){
-                        System.out.println(philosopherName+" кушает");
+            if (leftFork.getNumber() < rightFork.getNumber()) {
+                synchronized (leftFork) {
+                    synchronized (rightFork) {
+                        System.out.println(philosopherName + " кушает");
                         try {
-                            Thread.sleep((int)(Math.random()*4000+1000));
+                            Thread.sleep((int) (Math.random() * 4000 + 1000));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                        System.out.println(philosopherName+" размышляет");
+                        System.out.println(philosopherName + " размышляет");
                     }
                 }
-            }else{
-                synchronized (rightFork){
-                    synchronized (leftFork){
-                        System.out.println(philosopherName+" кушает");
+            } else {
+                synchronized (rightFork) {
+                    synchronized (leftFork) {
+                        System.out.println(philosopherName + " кушает");
                         try {
-                            Thread.sleep((int)(Math.random()*4000+1000));
+                            Thread.sleep((int) (Math.random() * 4000 + 1000));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                        System.out.println(philosopherName+" размышляет");
+                        System.out.println(philosopherName + " размышляет");
                     }
                 }
             }
