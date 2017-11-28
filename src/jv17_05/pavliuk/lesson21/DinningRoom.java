@@ -13,7 +13,7 @@ public class DinningRoom {
         }
         for (int i = 0; i < 5; i++) {
             philosophers[i] = new Philosopher(i + 1 + "-й философ", forks.get(0), forks.get(1), START);
-            Collections.rotate(forks, 1);
+            Collections.rotate(forks, -1);
             philosophers[i].start();
         }
         for (int i = 0; i < 5; i++) {

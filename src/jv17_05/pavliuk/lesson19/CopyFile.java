@@ -21,6 +21,7 @@ public class CopyFile {
             }
             bWriter.flush();
         } catch (IOException e) {
+            e.printStackTrace();
         }
         return true;
     }

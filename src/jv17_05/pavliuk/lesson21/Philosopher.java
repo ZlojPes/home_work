@@ -15,30 +15,37 @@ public class Philosopher extends Thread {
     }
 
     public void run() {
+        int leftForkNum = leftFork.getNumber(), rightForkNum = rightFork.getNumber();
         while (new Date().getTime() - start < 30000) {
-            if (leftFork.getNumber() < rightFork.getNumber()) {
+            if (leftForkNum < rightForkNum) {
+                System.out.println(philosopherName + " хочет взять " + leftForkNum + "-ю вилку");
                 synchronized (leftFork) {
+                    System.out.println(philosopherName + " взял " + leftForkNum + "-ю вилку и хочет взять " + rightForkNum + "-ю вилку");
                     synchronized (rightFork) {
-                        System.out.println(philosopherName + " кушает");
+                        System.out.println(philosopherName + " взял " + rightForkNum + "-ю вилку и кушает");
                         try {
                             Thread.sleep((int) (Math.random() * 4000 + 1000));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                        System.out.println(philosopherName + " размышляет");
+                        System.out.println(philosopherName + " положил " + rightForkNum + "-ю вилку и размышляет");
                     }
+                    System.out.println(philosopherName + " положил " + leftForkNum + "-ю вилку");
                 }
             } else {
+                System.out.println(philosopherName + " хочет взять " + rightForkNum + "-ю вилку");
                 synchronized (rightFork) {
+                    System.out.println(philosopherName + " взял " + rightForkNum + "-ю вилку и хочет взять " + leftForkNum + "-ю вилку");
                     synchronized (leftFork) {
-                        System.out.println(philosopherName + " кушает");
+                        System.out.println(philosopherName + " взял " + leftForkNum + "-ю вилку и кушает");
                         try {
                             Thread.sleep((int) (Math.random() * 4000 + 1000));
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
-                        System.out.println(philosopherName + " размышляет");
+                        System.out.println(philosopherName + " положил " + leftForkNum + "-ю вилку и размышляет");
                     }
+                    System.out.println(philosopherName + " положил " + rightForkNum + "-ю вилку");
                 }
             }
         }
