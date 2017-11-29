@@ -1,4 +1,4 @@
-package jv17_05.pavliuk.lesson19.serialization;
+package jv17_05.pavliuk.lesson20;
 
 import java.io.*;
 
